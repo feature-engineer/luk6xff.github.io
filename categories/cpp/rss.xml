@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>luk6xff&#x27;s tech blog - cpp</title>
+      <link>https://luk6xff.github.io</link>
+      <description>A simple blog theme focused on writing powered by Bulma and Zola based on [deepthought](https:&#x2F;&#x2F;github.com&#x2F;RatanShreshtha&#x2F;DeepThought&#x2F;)</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://luk6xff.github.io/categories/cpp/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 19 Dec 2022 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>My CPP Project Setup</title>
+          <pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://luk6xff.github.io/posts/cpp-proj-setup/</link>
+          <guid>https://luk6xff.github.io/posts/cpp-proj-setup/</guid>
+          <description xml:base="https://luk6xff.github.io/posts/cpp-proj-setup/">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;CPP is great&lt;&#x2F;p&gt;
+&lt;p&gt;Happy cpp&#x27;ing!&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>

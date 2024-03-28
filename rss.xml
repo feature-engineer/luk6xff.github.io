@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>luk6xff&#x27;s tech blog</title>
+      <link>https://luk6xff.github.io</link>
+      <description>A simple blog theme focused on writing powered by Bulma and Zola based on [deepthought](https:&#x2F;&#x2F;github.com&#x2F;RatanShreshtha&#x2F;DeepThought&#x2F;)</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://luk6xff.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 13 Feb 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Safe and Secure Coding in Rust Book</title>
+          <pubDate>Tue, 13 Feb 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://luk6xff.github.io/posts/safe-secure-rust/</link>
+          <guid>https://luk6xff.github.io/posts/safe-secure-rust/</guid>
+          <description xml:base="https://luk6xff.github.io/posts/safe-secure-rust/">&lt;h4 id=&quot;safe-and-secure-coding-in-rust-a-comparative-analysis-of-rust-and-c-c&quot;&gt;Safe and Secure Coding in Rust: A Comparative Analysis of Rust and C&#x2F;C++&lt;&#x2F;h4&gt;
+&lt;p&gt;Today, I am pleased to introduce a book I&#x27;ve authored, which delves into the utilization of Rust for building robust and secure applications. You can access the book by clicking &lt;a href=&quot;&#x2F;other&#x2F;safe_secure_rust_book&#x2F;index.html&quot;&gt;HERE&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Happy reading!&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>mdBook</title>
+          <pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://luk6xff.github.io/posts/md-book/</link>
+          <guid>https://luk6xff.github.io/posts/md-book/</guid>
+          <description xml:base="https://luk6xff.github.io/posts/md-book/">&lt;h2 id=&quot;how-to-create-a-presentation-using-mdbook&quot;&gt;How to create a presentation using mdBook&lt;&#x2F;h2&gt;
+&lt;p&gt;Creating an mdBook for your presentation involves organizing the content into Markdown files structured in a way that mdBook can compile into a book format.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-book-format&quot;&gt;A book format&lt;&#x2F;h2&gt;
+&lt;p&gt;I&#x27;ll provide you with a basic setup and some content following the outline I previously shared. For a full &lt;code&gt;mdBook&lt;&#x2F;code&gt;, you would typically set up a directory structure like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;presentation&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;├── book.toml
+&lt;&#x2F;span&gt;&lt;span&gt;└── src
+&lt;&#x2F;span&gt;&lt;span&gt;    ├── chapter_1.md
+&lt;&#x2F;span&gt;&lt;span&gt;    ├── chapter_2.md
+&lt;&#x2F;span&gt;&lt;span&gt;    ├── chapter_3.md
+&lt;&#x2F;span&gt;&lt;span&gt;    ├── chapter_4.md
+&lt;&#x2F;span&gt;&lt;span&gt;    ├── chapter_5.md
+&lt;&#x2F;span&gt;&lt;span&gt;    ├── chapter_6.md
+&lt;&#x2F;span&gt;&lt;span&gt;    ├── SUMMARY.md
+&lt;&#x2F;span&gt;&lt;span&gt;    └── conclusion.md
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step1-book-toml&quot;&gt;Step1: book.toml&lt;&#x2F;h3&gt;
+&lt;p&gt;This file contains metadata about your book. For simplicity, here&#x27;s a basic example:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;book&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;Your mdBook name&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;authors &lt;&#x2F;span&gt;&lt;span&gt;= [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;Your Name&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;language &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;en&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;build&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;build-dir &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;book&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-2-summary-md&quot;&gt;Step 2: SUMMARY.md&lt;&#x2F;h3&gt;
+&lt;p&gt;This file outlines the structure of your book. It links all chapters together.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;md&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-md &quot;&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;# Summary
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;- [Intro](.&#x2F;chapter_1.md)
+&lt;&#x2F;span&gt;&lt;span&gt;- [How to program in C](.&#x2F;chapter_2.md)
+&lt;&#x2F;span&gt;&lt;span&gt;- [How to program in C++](.&#x2F;chapter_3.md)
+&lt;&#x2F;span&gt;&lt;span&gt;- [How to program in Java](.&#x2F;chapter_4.md)
+&lt;&#x2F;span&gt;&lt;span&gt;- [How to program in Rust](.&#x2F;chapter_5.md)
+&lt;&#x2F;span&gt;&lt;span&gt;- [How to program in Python](.&#x2F;chapter_6.md)
+&lt;&#x2F;span&gt;&lt;span&gt;- [Conclusion](.&#x2F;conclusion.md)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-3-chapter-files&quot;&gt;Step 3: Chapter Files&lt;&#x2F;h3&gt;
+&lt;p&gt;Each chapter file (chapter_1.md, chapter_2.md, etc.) will contain the markdown content for that section of the presentation. Here&#x27;s an example for the first chapter:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;md&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-md &quot;&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;# Intro
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Hey It&amp;#39;s my book written in `markdown`.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;## Background and Motivation
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;I was very motivated to create markdown stuff.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;## Conclussion
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;All is fine in my **book**.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Continue creating Markdown files for each chapter following the outline, filling in the content as necessary.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;step-4-compile-the-mdbook&quot;&gt;Step 4: Compile the mdBook&lt;&#x2F;h3&gt;
+&lt;p&gt;After setting up your mdBook structure and writing your content, you can compile it into a book format using the mdBook tool. If you haven&#x27;t already, you&#x27;ll need to install mdBook:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;cargo install mdbook
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then, navigate to your book directory and run:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;mdbook build
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This command compiles your Markdown files into a static website that you can host or view locally.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;step-5-final-step-viewing-your-book&quot;&gt;Step 5: Final Step: Viewing Your Book&lt;&#x2F;h3&gt;
+&lt;p&gt;After building, you can view your book by opening the index.html file in the book directory with a web browser, or you can serve it locally with:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;mdbook serve
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This command starts a local web server. You can view your book by visiting http:&#x2F;&#x2F;localhost:3000 in your web browser.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h2&gt;
+&lt;p&gt;This setup gives you a solid foundation to create a comprehensive mdBook for your presentation :)&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Building a Time Planner with Python and PySide6</title>
+          <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://luk6xff.github.io/posts/time-planner-app/</link>
+          <guid>https://luk6xff.github.io/posts/time-planner-app/</guid>
+          <description xml:base="https://luk6xff.github.io/posts/time-planner-app/">&lt;h3 id=&quot;app-interface-overview&quot;&gt;App Interface Overview&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;luk6xff&#x2F;luk6xff.github.io&#x2F;master&#x2F;content&#x2F;other&#x2F;media&#x2F;time_planner_app&#x2F;time_planner_1.png&quot; alt=&quot;Time Planner app&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;em&gt;Figure 1: Time Planner app main widget.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;luk6xff&#x2F;luk6xff.github.io&#x2F;master&#x2F;content&#x2F;other&#x2F;media&#x2F;time_planner_app&#x2F;time_planner_2.png&quot; alt=&quot;Task configuration widget&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;em&gt;Figure 2: Task configuration widget.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h3&gt;
+&lt;p&gt;Have you ever felt overwhelmed by a busy schedule? This blog post explores the creation of a simple Time Planner app, developed in just a few hours to meet my wife&#x27;s needs for organizing her time spent on tasks. It utilizes Python&#x27;s powerful GUI framework, &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;doc.qt.io&#x2F;qtforpython-6&#x2F;&quot;&gt;PySide6&lt;&#x2F;a&gt;, to achieve this.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;source-code-and-build-instructions&quot;&gt;Source Code and Build Instructions&lt;&#x2F;h3&gt;
+&lt;p&gt;The repository is, as always, available on &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luk6xff&#x2F;TimePlanner&quot;&gt;my GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;pyside6-in-action&quot;&gt;PySide6 in Action&lt;&#x2F;h3&gt;
+&lt;p&gt;PySide6 is the official Python module from the Qt for Python project, offering access to the complete Qt 6.0+ framework and excelling in creating user-friendly interfaces. Here&#x27;s how it enhances the TimePlanner:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Intuitive Layouts:&lt;&#x2F;strong&gt; PySide6&#x27;s widgets and layout managers facilitate the creation of a clear and organized interface, with task lists, scheduling components, and priority indicators neatly arranged for easy interaction.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Seamless User Interaction:&lt;&#x2F;strong&gt; Featuring buttons, text boxes, and other interactive elements, it enables users to add, edit, or mark tasks as complete effortlessly.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cross-Platform Compatibility:&lt;&#x2F;strong&gt; One of its major advantages is ensuring that the app runs smoothly on both Windows and Linux, providing flexibility for users on different operating systems.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;development-process&quot;&gt;Development Process&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Conceptualization:&lt;&#x2F;strong&gt; The goal was to develop an app that allows users to add tasks to a daily list, store them, and start counting the time spent on a selected task upon clicking it.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Environment Setup:&lt;&#x2F;strong&gt; The setup involves installing Python, PySide6, Pillow, and PyInstaller libraries. The development was primarily focused on Windows, as that&#x27;s my wife&#x27;s main operating system. To set up, simply run the following commands:&lt;pre data-lang=&quot;ps1&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-ps1 &quot;&gt;&lt;code class=&quot;language-ps1&quot; data-lang=&quot;ps1&quot;&gt;&lt;span&gt;.\setup.ps1
+&lt;&#x2F;span&gt;&lt;span&gt;.\venv\Scripts\Activate.ps1
+&lt;&#x2F;span&gt;&lt;span&gt;pip install -r requirements.txt
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;GUI Design:&lt;&#x2F;strong&gt; The UI was entirely crafted manually, without the use of the Qt Designer tool, in the method &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luk6xff&#x2F;TimePlanner&#x2F;blob&#x2F;master&#x2F;main.py#L60&quot;&gt;&lt;code&gt;init_ui&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Functionality Implementation:&lt;&#x2F;strong&gt; The rest of the logic is straightforwardly implemented as part of the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luk6xff&#x2F;TimePlanner&#x2F;blob&#x2F;master&#x2F;main.py#L25&quot;&gt;&lt;code&gt;TimePlanner&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; class, which inherits from &lt;code&gt;QWidget&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Storage:&lt;&#x2F;strong&gt; The history of tasks is stored in a &lt;code&gt;json&lt;&#x2F;code&gt; file named &lt;code&gt;tasks.json&lt;&#x2F;code&gt; in the root folder of your script or executable file.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Local App Build:&lt;&#x2F;strong&gt; To build the app locally, simply run:&lt;pre data-lang=&quot;ps1&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-ps1 &quot;&gt;&lt;code class=&quot;language-ps1&quot; data-lang=&quot;ps1&quot;&gt;&lt;span&gt;.\run.ps1
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Standalone Executable Deployment:&lt;&#x2F;strong&gt; A statically linked PE executable can be created using the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;pyinstaller.org&#x2F;en&#x2F;stable&#x2F;&quot;&gt;PyInstaller tool&lt;&#x2F;a&gt; by running the &lt;code&gt;.\deploy.ps1&lt;&#x2F;code&gt; command.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;benefits-and-impact&quot;&gt;Benefits and Impact&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Enhanced Organization:&lt;&#x2F;strong&gt; Tasks are clearly listed, prioritized, and easily accessible, fostering better focus and reducing mental clutter.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Effective Time Management:&lt;&#x2F;strong&gt; Visual task scheduling aids in allocating time efficiently and avoiding last-minute rushes.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Time Control:&lt;&#x2F;strong&gt; The app provides precise tracking of time spent on tasks, which can be useful for filling out timesheets in your company.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;future-enhancements&quot;&gt;Future Enhancements&lt;&#x2F;h3&gt;
+&lt;p&gt;The app has significant potential for further development, including:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Notifications:&lt;&#x2F;strong&gt; Using PySide6 to implement reminders or alerts for upcoming tasks or deadlines, ensuring important tasks are not overlooked.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Collaboration Features:&lt;&#x2F;strong&gt; Potential for shared task lists or calendars, facilitating teamwork and project management.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Data Synchronization:&lt;&#x2F;strong&gt; Exploring options for syncing task data across devices for seamless access from anywhere.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h3&gt;
+&lt;p&gt;The TimePlanner app demonstrates the capabilities of Python and PySide6 in quickly creating user-friendly and effective tools. Originally developed for personal use, its core features can benefit anyone looking to optimize their schedule and improve time management skills.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>The Ultimate Command List for Linux Power Users</title>
+          <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://luk6xff.github.io/posts/linux-commands/</link>
+          <guid>https://luk6xff.github.io/posts/linux-commands/</guid>
+          <description xml:base="https://luk6xff.github.io/posts/linux-commands/">&lt;h2 id=&quot;mastering-linux-the-ultimate-command-list-for-power-users-by-luk6xff&quot;&gt;Mastering Linux: The Ultimate Command List for Power Users by luk6xff&lt;&#x2F;h2&gt;
+&lt;p&gt;Linux, the powerhouse behind countless servers and systems, offers an unparalleled level of control to those who know how to navigate its depths. Whether you&#x27;re a seasoned system administrator, a developer, or just a Linux enthusiast, having a comprehensive command list at your disposal can drastically increase your productivity and understanding of your system. In this post, we&#x27;ll dive into an expansive list of Linux commands curated by me for my personal daily use, covering everything from basic file management to advanced networking and security measures. This guide is designed to be your go-to resource for Linux commands, enhancing your command-line proficiency and helping you unlock the full potential of Linux.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;full-commands-list&quot;&gt;Full commands list&lt;&#x2F;h2&gt;
+&lt;p&gt;All the commands available on &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luk6xff&#x2F;linux-commands&#x2F;blob&#x2F;master&#x2F;README.md&quot;&gt;my github repository&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;short-overview-what-you-can-find-in-the-list&quot;&gt;Short Overview what you can find in the list&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;user&quot;&gt;User&lt;&#x2F;h3&gt;
+&lt;p&gt;Explore essential commands for managing users, including creating users, changing passwords, and modifying user privileges.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;docker&quot;&gt;Docker&lt;&#x2F;h3&gt;
+&lt;p&gt;Dive into Docker commands for container management, image handling, and deploying applications in containers.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;hardware&quot;&gt;Hardware&lt;&#x2F;h3&gt;
+&lt;p&gt;Learn how to interrogate and monitor your system&#x27;s hardware components with commands that reveal connected devices and their statuses.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;file-system&quot;&gt;File System&lt;&#x2F;h3&gt;
+&lt;p&gt;Understand commands for navigating the Linux file system, managing files and directories, and assessing disk usage.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;performance&quot;&gt;Performance&lt;&#x2F;h3&gt;
+&lt;p&gt;Discover commands to monitor system performance, manage processes, and optimize resource usage for better efficiency.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;bash&quot;&gt;Bash&lt;&#x2F;h3&gt;
+&lt;p&gt;Uncover the power of Bash scripting and command-line tips to automate tasks and streamline your workflow.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;cron&quot;&gt;Cron&lt;&#x2F;h3&gt;
+&lt;p&gt;Master scheduling with cron commands to automate and run scripts at specified times or intervals.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ssh&quot;&gt;SSH&lt;&#x2F;h3&gt;
+&lt;p&gt;Securely manage remote systems using SSH commands for secure connections, file transfers, and remote command execution.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;python&quot;&gt;Python&lt;&#x2F;h3&gt;
+&lt;p&gt;Navigate Python environments and manage Python-specific tasks, including running scripts and managing packages.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tmux&quot;&gt;Tmux&lt;&#x2F;h3&gt;
+&lt;p&gt;Enhance terminal usage with Tmux commands for session management, window splitting, and maintaining persistent workspaces.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;git&quot;&gt;Git&lt;&#x2F;h3&gt;
+&lt;p&gt;Control versioning and collaborate on projects with Git commands for managing changes, branches, and merges in your codebase.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ffmpeg&quot;&gt;FFmpeg&lt;&#x2F;h3&gt;
+&lt;p&gt;Manipulate audio and video files with FFmpeg commands for format conversion, streaming, and editing multimedia content.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;system-administration&quot;&gt;System Administration&lt;&#x2F;h3&gt;
+&lt;p&gt;Handle system-wide configurations, user management, and essential administrative tasks to maintain and secure Linux systems.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;security&quot;&gt;Security&lt;&#x2F;h3&gt;
+&lt;p&gt;Implement security measures with commands for firewall management, secure file transfers, and applying security patches.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;package-management&quot;&gt;Package Management&lt;&#x2F;h3&gt;
+&lt;p&gt;Efficiently install, update, and manage software packages across different Linux distributions with package management commands.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;networking-and-internet&quot;&gt;Networking and Internet&lt;&#x2F;h3&gt;
+&lt;p&gt;Configure network settings, troubleshoot connections, and ensure optimal networking performance with networking commands.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;netcat&quot;&gt;Netcat&lt;&#x2F;h3&gt;
+&lt;p&gt;Utilize Netcat for versatile networking tasks, including port scanning, file transfers, and creating simple servers.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;file-and-disk-management&quot;&gt;File and Disk Management&lt;&#x2F;h3&gt;
+&lt;p&gt;Manage storage with commands for checking disk health, managing file permissions, and ensuring file system integrity.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;advanced-command-line-tricks&quot;&gt;Advanced Command Line Tricks&lt;&#x2F;h3&gt;
+&lt;p&gt;Discover advanced command-line techniques and shortcuts to elevate your terminal use, making it more powerful and efficient.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;expanding-your-linux-mastery&quot;&gt;Expanding Your Linux Mastery&lt;&#x2F;h2&gt;
+&lt;p&gt;The commands listed here represent just the tip of the iceberg when it comes to harnessing the power of Linux. As you become more comfortable with these commands, you&#x27;ll discover even more ways to optimize, secure, and explore your Linux environment. Whether you&#x27;re automating tasks with &lt;code&gt;bash&lt;&#x2F;code&gt; scripts, setting up secure network connections, or managing virtual machines, Linux commands empower you to take full control of your computing environment.&lt;&#x2F;p&gt;
+&lt;p&gt;Embrace the command line, and let the vast world of Linux commands unlock new potentials for your projects and systems. Remember, the more you practice, the more intuitive these commands will become.&lt;&#x2F;p&gt;
+&lt;p&gt;Happy Linux-ing!&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>My CPP Project Setup</title>
+          <pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://luk6xff.github.io/posts/cpp-proj-setup/</link>
+          <guid>https://luk6xff.github.io/posts/cpp-proj-setup/</guid>
+          <description xml:base="https://luk6xff.github.io/posts/cpp-proj-setup/">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;CPP is great&lt;&#x2F;p&gt;
+&lt;p&gt;Happy cpp&#x27;ing!&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>GEF - A better GDB</title>
+          <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://luk6xff.github.io/posts/gef-tool/</link>
+          <guid>https://luk6xff.github.io/posts/gef-tool/</guid>
+          <description xml:base="https://luk6xff.github.io/posts/gef-tool/">&lt;h2 id=&quot;a-quick-guide-to-using-gef-for-debugging&quot;&gt;A Quick Guide to Using GEF for Debugging&lt;&#x2F;h2&gt;
+&lt;p&gt;Debugging is like being a detective for software, where you hunt for clues to fix problems in code. GEF makes this detective work easier and more effective, especially when you&#x27;re dealing with tricky bugs or trying to understand how a program really works. Let&#x27;s break down how GEF can help you and how to get started with it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-gef&quot;&gt;What is GEF?&lt;&#x2F;h2&gt;
+&lt;p&gt;GEF is a tool that adds extra powers to GDB, the GNU Debugger, which is a tool many developers use to find bugs in their programs. GEF makes GDB more user-friendly and powerful by adding new features, such as better visuals, more information about your program&#x27;s status, and tools to check the security of your software.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-should-you-use-gef&quot;&gt;Why Should You Use GEF?&lt;&#x2F;h2&gt;
+&lt;p&gt;GEF makes your life easier when you&#x27;re debugging:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Clearer Information&lt;&#x2F;strong&gt;: It shows you what&#x27;s going on in your program more clearly, making it easier to understand problems.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Better Control&lt;&#x2F;strong&gt;: You get more ways to stop and inspect your program exactly where and when you need to.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Find Bugs Faster&lt;&#x2F;strong&gt;: GEF has special features to help spot common mistakes that can lead to bugs.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;getting-started-with-gef&quot;&gt;Getting Started with GEF&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;setting-up&quot;&gt;Setting Up&lt;&#x2F;h3&gt;
+&lt;p&gt;First, you need GDB installed. Then, to add GEF, you run a simple command in your terminal:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;bash -c &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;$(&lt;&#x2F;span&gt;&lt;span&gt;curl -fsSL&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt; http:&#x2F;&#x2F;gef.blah.cat&#x2F;sh)&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This command gets GEF set up with your GDB, and you&#x27;re ready to go!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;using-gef&quot;&gt;Using GEF&lt;&#x2F;h3&gt;
+&lt;p&gt;To start debugging a program with GEF, you open your terminal and type:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;gdb -q .&#x2F;your_program
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This command starts GDB like usual, but you&#x27;ll notice GEF&#x27;s improvements right away.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;helpful-features&quot;&gt;Helpful Features&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;context&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;: This shows a snapshot of what&#x27;s happening in your program, like what the computer is currently working on and what data it&#x27;s handling.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;heap&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;: If your program uses dynamic memory (allocating memory during runtime), this command helps you see how that memory is being used or misused.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;pattern create&lt;&#x2F;code&gt; &#x2F; &lt;code&gt;pattern search&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;: These commands help you figure out how data is laid out in memory, which is super useful for finding certain types of bugs.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;checksec&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;: This command checks the security properties of your executable, providing insights into potential vulnerabilities, such as stack canaries or NX bits.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;gef config &#x2F; gef save&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;: Customize and save your GEF environment to streamline your debugging sessions, tailoring the tool to your needs.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;dereference&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;: Offers a more intuitive view of pointers and memory addresses, making it easier to navigate through complex structures.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;registers&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt;: Get a quick overview of the current state of CPU registers, which is crucial for low-level debugging&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;debugging-with-gef-a-quick-example&quot;&gt;Debugging with GEF: A Quick Example&lt;&#x2F;h3&gt;
+&lt;p&gt;Imagine you have a program that&#x27;s not working right, and you suspect it&#x27;s due to a bug where the program is trying to access memory it shouldn&#x27;t. Here&#x27;s how you might use GEF to find that bug:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Start GEF with your program&lt;&#x2F;strong&gt;: &lt;code&gt;gdb -q .&#x2F;buggy_program&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Set a breakpoint&lt;&#x2F;strong&gt;: This is like telling GEF, &amp;quot;Pause here; I want to check something.&amp;quot; You can do this with the command &lt;code&gt;break main&lt;&#x2F;code&gt; if you want to stop right when the main function starts.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Run the program&lt;&#x2F;strong&gt;: Just type &lt;code&gt;run&lt;&#x2F;code&gt; and hit enter. The program will start and then pause where you set the breakpoint.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Step through the code&lt;&#x2F;strong&gt;: Use the &lt;code&gt;next&lt;&#x2F;code&gt; command to go through your program one line at a time. Watch the &lt;code&gt;context&lt;&#x2F;code&gt; information GEF gives you to see what the program is doing.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Inspect memory&lt;&#x2F;strong&gt;: If you think the bug is happening because the program is accessing memory it shouldn&#x27;t, you can use commands like &lt;code&gt;x&#x2F;gx&lt;&#x2F;code&gt;, &lt;code&gt;heap chunks&lt;&#x2F;code&gt;, and &lt;code&gt;search-pattern&lt;&#x2F;code&gt; to explore and manipulate memory at runtime, helping uncover issues like memory leaks or corruption.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Scripting&lt;&#x2F;strong&gt;: Automate repetitive analysis tasks or implement custom logic for complex debugging scenarios using Python scripts.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Through this process, GEF gives you a clearer view of what&#x27;s happening inside your program, helping you spot and fix the bug.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;real-world-example&quot;&gt;Real world example&lt;&#x2F;h2&gt;
+&lt;p&gt;Let&#x27;s try to use &lt;code&gt;gef&lt;&#x2F;code&gt; in action:
+I have a following code simulating buffer overflow issue:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#9b9b9b;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;lt;iostream&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b9b9b;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;lt;string&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b9b9b;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;lt;cstring&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b9b9b;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;lt;limits&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span&gt;admin_panel() {
+&lt;&#x2F;span&gt;&lt;span&gt;    std::cout &amp;lt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&amp;lt;&amp;lt;&amp;lt; Setting up Admin Panel &amp;gt;&amp;gt;&amp;gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; std::endl;
+&lt;&#x2F;span&gt;&lt;span&gt;    std::system(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&#x2F;bin&#x2F;sh&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span&gt;store_credentials_into_db(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;const char* &lt;&#x2F;span&gt;&lt;span&gt;buf, size_t buf_len) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(buf == &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;nullptr &lt;&#x2F;span&gt;&lt;span&gt;|| buf_len == &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; Store data ...
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span&gt;process_credentials() {
+&lt;&#x2F;span&gt;&lt;span&gt;    std::cout &amp;lt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&amp;gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    std::flush(std::cout);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt; buffer[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;128&lt;&#x2F;span&gt;&lt;span&gt;];
+&lt;&#x2F;span&gt;&lt;span&gt;    std::cin &amp;gt;&amp;gt; buffer;
+&lt;&#x2F;span&gt;&lt;span&gt;    buffer[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;sizeof&lt;&#x2F;span&gt;&lt;span&gt;(buffer) - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;] = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e3bbab;&quot;&gt;\0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    store_credentials_into_db(buffer, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;sizeof&lt;&#x2F;span&gt;&lt;span&gt;(buffer));
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span&gt;main() {
+&lt;&#x2F;span&gt;&lt;span&gt;    process_credentials();
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Debugging the provided C++ code with GEF (GDB Enhanced Features) will allow you to understand the execution flow, examine variables, and potentially identify vulnerabilities or logical errors. Below are steps on how to debug this C++ program using GEF, focusing on key points like setting breakpoints, stepping through the code, and inspecting the memory and variables.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;step-1-compile-the-program-with-debugging-information&quot;&gt;Step 1: Compile the Program with Debugging Information&lt;&#x2F;h4&gt;
+&lt;p&gt;First, compile the C++ program (full example available:&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luk6xff&#x2F;luk6xff.github.io&#x2F;tree&#x2F;master&#x2F;content&#x2F;other&#x2F;code&#x2F;gef_tool&quot;&gt;HERE&lt;&#x2F;a&gt;): with debugging information enabled (&lt;code&gt;-g&lt;&#x2F;code&gt;) and disable optimizations (&lt;code&gt;-O0&lt;&#x2F;code&gt;) to ensure that you can inspect the source code as is during debugging.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;cd gef_tool &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span&gt;.&#x2F;build.sh
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;step-2-start-and-analyze-gef-with-the-program&quot;&gt;Step 2: Start and analyze GEF with the Program&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Open a terminal and start GEF with your compiled program:&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;gdb -q .&#x2F;build&#x2F;credentials_demo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Check the binary security flags by &lt;code&gt;checksec&lt;&#x2F;code&gt;:&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;checksec
+&lt;&#x2F;span&gt;&lt;span&gt;    Canary                        : ✘
+&lt;&#x2F;span&gt;&lt;span&gt;    NX                            : ✘
+&lt;&#x2F;span&gt;&lt;span&gt;    PIE                           : ✘
+&lt;&#x2F;span&gt;&lt;span&gt;    Fortify                       : ✘
+&lt;&#x2F;span&gt;&lt;span&gt;    RelRO                         : Partial
+&lt;&#x2F;span&gt;&lt;span&gt;elf-info
+&lt;&#x2F;span&gt;&lt;span&gt;    Magic                 : 7f 45 4c 46
+&lt;&#x2F;span&gt;&lt;span&gt;    Class                 : 0x2 - ELF_64_BITS
+&lt;&#x2F;span&gt;&lt;span&gt;    Endianness            : 0x1 - LITTLE_ENDIAN
+&lt;&#x2F;span&gt;&lt;span&gt;    Version               : 0x1
+&lt;&#x2F;span&gt;&lt;span&gt;    OS ABI                : 0x0 - SYSTEMV
+&lt;&#x2F;span&gt;&lt;span&gt;    ABI Version           : 0x0
+&lt;&#x2F;span&gt;&lt;span&gt;    Type                  : 0x3 - ET_DYN
+&lt;&#x2F;span&gt;&lt;span&gt;    Machine               : 0x3e - X86_64
+&lt;&#x2F;span&gt;&lt;span&gt;    Program Header Table  : 0x0000000000000040
+&lt;&#x2F;span&gt;&lt;span&gt;    Section Header Table  : 0x0000000000011150
+&lt;&#x2F;span&gt;&lt;span&gt;    Header Table          : 0x0000000000000040
+&lt;&#x2F;span&gt;&lt;span&gt;    ELF Version           : 0x1
+&lt;&#x2F;span&gt;&lt;span&gt;    Header size           : 64 (0x40)
+&lt;&#x2F;span&gt;&lt;span&gt;    Entry point           : 0x0000000000001220
+&lt;&#x2F;span&gt;&lt;span&gt;    ...
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;step-3-set-breakpoints&quot;&gt;Step 3: Set Breakpoints&lt;&#x2F;h4&gt;
+&lt;p&gt;Set breakpoints at key functions to inspect their behavior. For instance, you might want to break at &lt;code&gt;process_credentials&lt;&#x2F;code&gt; to observe how input is handled and at &lt;code&gt;admin_panel&lt;&#x2F;code&gt; to see if it&#x27;s possible to reach that function.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;(gef) b &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;(&amp;amp;process_credentials)
+&lt;&#x2F;span&gt;&lt;span&gt;(gef) b &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;(&amp;amp;admin_panel)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;step-4-run-the-program&quot;&gt;Step 4: Run the Program&lt;&#x2F;h4&gt;
+&lt;p&gt;Start the program within GEF by typing &lt;code&gt;r&lt;&#x2F;code&gt; or &lt;code&gt;run&lt;&#x2F;code&gt;. The program will start and stop at the first breakpoint.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;r
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-5-find-the-ret-address-of-the-process-credentials-function&quot;&gt;Step 5: Find the &lt;code&gt;ret&lt;&#x2F;code&gt; address of the &lt;code&gt;process_credentials&lt;&#x2F;code&gt; function&lt;&#x2F;h3&gt;
+&lt;p&gt;When brakpoint is reached, print the address of the stack pointer which contain the return address of &lt;code&gt;process_credentials&lt;&#x2F;code&gt; function. It will be used to overrite it with &lt;code&gt;admin_panel&lt;&#x2F;code&gt; address.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;(gef) i r $rsp
+&lt;&#x2F;span&gt;&lt;span&gt;    rsp            0x7fffffffd838      0x7fffffffd838
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;step-6-step-through-the-code&quot;&gt;Step 6: Step Through the Code&lt;&#x2F;h4&gt;
+&lt;p&gt;Use the &lt;code&gt;next&lt;&#x2F;code&gt; or &lt;code&gt;n&lt;&#x2F;code&gt; command to step through the code line by line. If you want to step into functions (like &lt;code&gt;store_credentials_into_db&lt;&#x2F;code&gt;), use &lt;code&gt;step&lt;&#x2F;code&gt; or &lt;code&gt;s&lt;&#x2F;code&gt; instead.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;step-6-inspect-variables-and-memory&quot;&gt;Step 6: Inspect Variables and Memory&lt;&#x2F;h4&gt;
+&lt;p&gt;As you reach the &lt;code&gt;std::cin&lt;&#x2F;code&gt; call, you can inspect the contents of &lt;code&gt;buffer&lt;&#x2F;code&gt; and other variables:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you want to dereference all the stack entries inside a function context (on a 64bit architecture): &lt;code&gt;p ($rbp - $rsp)&#x2F;8&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Find the memory address of the &lt;code&gt;buffer&lt;&#x2F;code&gt; array: &lt;code&gt;p &amp;amp;buffer[0]&lt;&#x2F;code&gt;= 0x7fffffffd7b0&lt;&#x2F;li&gt;
+&lt;li&gt;To examine the content of &lt;code&gt;buffer&lt;&#x2F;code&gt;: &lt;code&gt;x&#x2F;128c buffer&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;step-7-continue-execution&quot;&gt;Step 7: Continue Execution&lt;&#x2F;h4&gt;
+&lt;p&gt;After inspecting the variables at the first breakpoint, continue execution to see if the second breakpoint (&lt;code&gt;admin_panel&lt;&#x2F;code&gt;) is hit.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;(gef) continue
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;step-8-experiment-with-inputs&quot;&gt;Step 8: Experiment with Inputs&lt;&#x2F;h4&gt;
+&lt;p&gt;If you&#x27;re analyzing the program for vulnerabilities, you might try inputs that could potentially overflow &lt;code&gt;buffer&lt;&#x2F;code&gt; or otherwise manipulate the program&#x27;s flow. Run&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;step-9-utilize-gef-commands-for-deeper-analysis&quot;&gt;Step 9: Utilize GEF Commands for Deeper Analysis&lt;&#x2F;h4&gt;
+&lt;p&gt;GEF provides commands that are particularly useful for security analysis:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pattern create&lt;&#x2F;code&gt; and &lt;code&gt;pattern search&lt;&#x2F;code&gt; to test for buffer overflows.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;heap bins&lt;&#x2F;code&gt; to inspect the heap state if dynamic memory allocation is used elsewhere in the program.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;step-10-quit-gef&quot;&gt;Step 10: Quit GEF&lt;&#x2F;h4&gt;
+&lt;p&gt;Once you&#x27;re done debugging, you can quit GEF with the &lt;code&gt;quit&lt;&#x2F;code&gt; command.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;more-commands&quot;&gt;More commands&lt;&#x2F;h3&gt;
+&lt;p&gt;All the available GEF commands available &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;hugsy.github.io&#x2F;gef-extras&#x2F;commands&#x2F;assemble&#x2F;&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;bonus&quot;&gt;Bonus&lt;&#x2F;h3&gt;
+&lt;p&gt;I&#x27;ve also developed an exploit for the provided code using insights from gef. You can locate it &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luk6xff&#x2F;luk6xff.github.io&#x2F;tree&#x2F;master&#x2F;content&#x2F;other&#x2F;code&#x2F;gef_tool&#x2F;exploit_cpp.py&quot;&gt;here&lt;&#x2F;a&gt;. Please remember to customize the addresses, specifically process_credentials_ret_addr and buffer_addr, to match those on your system.&amp;quot;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;GEF is like a supercharged version of GDB that makes debugging less of a headache. It&#x27;s packed with features that give you a clearer view of your program and help you find and fix bugs more efficiently. Whether you&#x27;re a new developer or have been coding for years, GEF is a valuable tool to add to your software debugging toolkit.&lt;&#x2F;p&gt;
+&lt;p&gt;Happy hacking!&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Led Clock</title>
+          <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://luk6xff.github.io/posts/led-clock/</link>
+          <guid>https://luk6xff.github.io/posts/led-clock/</guid>
+          <description xml:base="https://luk6xff.github.io/posts/led-clock/">&lt;h2 id=&quot;a-supercharged-led-clock&quot;&gt;A Supercharged LED Clock&lt;&#x2F;h2&gt;
+&lt;p&gt;Today, we&#x27;re diving into one of my latest small projects that&#x27;s perfect for anyone who loves building and coding. It&#x27;s an LED clock, but not your average timekeeper. This one offers features like weather updates, automatic time adjustments, and even a web interface for tweaking things on the fly. Let&#x27;s break down what makes this clock tick (literally).
+Note: All the pictures, videos and schematics to be found in the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luk6xff&#x2F;led-clock&#x2F;tree&#x2F;master&quot;&gt;project&#x27;s GitHub repository&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tech-toolbox&quot;&gt;Tech Toolbox&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ESP32 Microcontroller:&lt;&#x2F;strong&gt; The ESP32 boasts dual cores and real-time operating system (FreeRTOS) capabilities, allowing for smoother multitasking and handling complex tasks efficiently.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;MAX7219 LED Driver:&lt;&#x2F;strong&gt; This chip controls the cool LED 4 MATRIX 32x8-MAX7219, making those numbers and letters shine bright.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;DS3231 Real-Time Clock (RTC):&lt;&#x2F;strong&gt; This keeps perfect time even during power outages, thanks to a backup battery.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;BH1750FVI Ambient light sensor:&lt;&#x2F;strong&gt; Used to modify the brightness of the display automatically&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;LORA Sensor (Optional):&lt;&#x2F;strong&gt; Want weather displayed on your clock? This sensor grabs temperature and humidity data for you.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Plus some wires, resistors, capacitors&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Full BOM available &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luk6xff&#x2F;led-clock&#x2F;blob&#x2F;master&#x2F;docs&#x2F;BOM.md&quot;&gt;HERE&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;coding-with-platformio&quot;&gt;Coding with PlatformIO&lt;&#x2F;h2&gt;
+&lt;p&gt;While the project leverages the familiar Arduino environment for coding the logic, it utilizes PlatformIO as the development platform. PlatformIO is a powerful tool that offers a streamlined experience for working with various microcontroller boards, including the ESP32 used in this project. It integrates seamlessly with popular code editors like Visual Studio Code, making development and debugging more efficient.&lt;&#x2F;p&gt;
+&lt;p&gt;The code itself handles everything from keeping time to controlling the display, talking to sensors (if you use them), and interacting with the web interface. This web interface lets you adjust things like time zones, weather app settings, and how the clock looks – all from your web browser.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;more-than-just-telling-time&quot;&gt;More Than Just Telling Time&lt;&#x2F;h2&gt;
+&lt;p&gt;This LED clock is packed with the folowing features:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Automatic Time Updates:&lt;&#x2F;strong&gt; Never worry about setting the time again! The clock can sync up with the internet to stay perfectly accurate. It also supports timezones and time changes.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Current weather and forecasts:&lt;&#x2F;strong&gt;  See the weather forecasts, nowcasts from &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;openweathermap.org&#x2F;&quot;&gt;openweathermap.org&lt;&#x2F;a&gt; on the display.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Weather station:&lt;&#x2F;strong&gt;  See the current temperature, pressure or humidity (if you have the LORA sensor) right on your clock.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Over-the-Air (OTA) Updates:&lt;&#x2F;strong&gt; Keep your clock&#x27;s firmware up-to-date by uploading new versions wirelessly. This ensures you have the latest features and bug fixes without needing to physically reconnect the clock to your computer.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Web Tweaks:&lt;&#x2F;strong&gt; Change settings and customize how the clock looks using any web browser on your network.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Make it Yours:&lt;&#x2F;strong&gt; Play around with different display styles, animations, and brightness levels to personalize your clock.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;building-and-beyond&quot;&gt;Building and Beyond&lt;&#x2F;h2&gt;
+&lt;p&gt;The &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luk6xff&#x2F;led-clock&#x2F;tree&#x2F;master&quot;&gt;project&#x27;s GitHub repository&lt;&#x2F;a&gt; has detailed instructions and a shopping list (Bill of Materials) to help you put it all together. Since it&#x27;s open-source, you can also get creative and add your own touches! If you run into any issues or want to learn more ping me directly.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h2&gt;
+&lt;p&gt;This LED clock project was a perfect project to learn more about ESP32 architecture and build something useful at once.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>UsbMux And Relay Remote Controller</title>
+          <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://luk6xff.github.io/posts/usbmux/</link>
+          <guid>https://luk6xff.github.io/posts/usbmux/</guid>
+          <description xml:base="https://luk6xff.github.io/posts/usbmux/">&lt;h2 id=&quot;project-overview&quot;&gt;Project Overview&lt;&#x2F;h2&gt;
+&lt;p&gt;This project tackles the need for remote device control using a single USB connection for both firmware flashing and serial communication, a challenge highlighted during the pandemic. For source code, hardware schematics, build instructions, and additional images, visit the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luk6xff&#x2F;usbmux&#x2F;tree&#x2F;master&quot;&gt;project&#x27;s GitHub repository&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;core-features&quot;&gt;Core Features&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dual-Function USB Port:&lt;&#x2F;strong&gt; Utilizing a USB 2.0 multiplexer, the device switches between:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Flashing Mode (Bootloader):&lt;&#x2F;strong&gt; Activated when a USB pin (USB_ID) is high, enabling firmware updates.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Operational Mode:&lt;&#x2F;strong&gt; Engages when USB_ID is low, starting the device normally for serial communication over USB.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Power Management:&lt;&#x2F;strong&gt; Integrates a power relay for remote power toggling.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Control Interfaces:&lt;&#x2F;strong&gt; Offers UART CLI and an HTTP server for device management through serial commands or web requests.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;development-insights&quot;&gt;Development Insights&lt;&#x2F;h2&gt;
+&lt;p&gt;Developed with &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;platformio.org&#x2F;&quot;&gt;PlatformIO&lt;&#x2F;a&gt; for C++ programming on the ESP8266 microcontroller, focusing on cost-efficiency and compact design. The TS3USB221 USB 2.0 two-channel multiplexer facilitates the USB port&#x27;s dual functionality. The development prioritized technical efficacy to achieve reliable remote control and adaptable usage.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;advantages&quot;&gt;Advantages&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Remote Management:&lt;&#x2F;strong&gt; Enhances the capability to remotely switch device modes, manage power, and adjust settings via both serial and web interfaces.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Flexibility:&lt;&#x2F;strong&gt; The USB port&#x27;s dual use and varied control interfaces provide versatile options for firmware updates and device management.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;expanded-capabilities&quot;&gt;Expanded Capabilities&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Relay Control Extension:&lt;&#x2F;strong&gt; The &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luk6xff&#x2F;usbmux&#x2F;tree&#x2F;power_relays&quot;&gt;power_relays branch&lt;&#x2F;a&gt; extends functionality to manage up to 8 relays simultaneously, expanding device control capabilities.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h2&gt;
+&lt;p&gt;Focused on the TS3USB221 for its USB multiplexing capabilities, this project employs the ESP8266 microcontroller for its balance of cost and performance, streamlined for remote device control. Utilizing the PlatformIO ecosystem for C++ development ensures a streamlined, technically grounded approach to device management and firmware deployment. Further information and visuals will be updated in the project repository.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Figure 1: USB Mux case ver 1.0.&lt;&#x2F;em&gt;&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;luk6xff&#x2F;luk6xff.github.io&#x2F;master&#x2F;content&#x2F;other&#x2F;media&#x2F;usbmux&#x2F;usb_mux_case.png&quot; alt=&quot;Usb Mux Case&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Figure 2: USB Mux case ver 1.1 - branch power_relays&lt;&#x2F;em&gt;&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;luk6xff&#x2F;luk6xff.github.io&#x2F;master&#x2F;content&#x2F;other&#x2F;media&#x2F;usbmux&#x2F;usb_mux_power_relays.png&quot; alt=&quot;Usb Mux Case - Power relays&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Figure 3: USB Mux UART CLI.&lt;&#x2F;em&gt;&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;luk6xff&#x2F;luk6xff.github.io&#x2F;master&#x2F;content&#x2F;other&#x2F;media&#x2F;usbmux&#x2F;usb_mux_uart_cli.png&quot; alt=&quot;Usb Mux Case - UART CLI&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Figure 4: USB Mux HTTP Server.&lt;&#x2F;em&gt;&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;luk6xff&#x2F;luk6xff.github.io&#x2F;master&#x2F;content&#x2F;other&#x2F;media&#x2F;usbmux&#x2F;usb_mux_http_server.png&quot; alt=&quot;Usb Mux Case - HTTP Server&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Zeroth Post</title>
+          <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://luk6xff.github.io/posts/post-0/</link>
+          <guid>https://luk6xff.github.io/posts/post-0/</guid>
+          <description xml:base="https://luk6xff.github.io/posts/post-0/">&lt;h2 id=&quot;the-zeroth-post&quot;&gt;The Zeroth post&lt;&#x2F;h2&gt;
+&lt;p&gt;Welcome to my blog dedicated to exploring the cutting-edge of software engineering within the realms of automotive systems, the Internet of Things (IoT), and cybersecurity. As a software engineer deeply embedded in the automotive industry, I&#x27;ve carved out a niche at the intersection of technology and motion, leveraging the power of programming languages like C++, Rust, Python, and Go to drive innovation and secure the future of mobility.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;an-idea&quot;&gt;An idea&lt;&#x2F;h2&gt;
+&lt;p&gt;The blog is about sharing knowledge, from technical tutorials and programming insights to industry trends and security practices. Whether you&#x27;re in the tech industry, a coding enthusiast, or curious about the digital transformation of automotive systems, this blog offers a concise look into the technologies shaping our future.&lt;&#x2F;p&gt;
+&lt;p&gt;Join me as we navigate the complexities of software development, uncover the potential of IoT, and tackle the challenges of cybersecurity together. Let&#x27;s drive innovation, one line of code at a time :)&lt;&#x2F;p&gt;
+&lt;p&gt;Happy coding!
+Lukasz&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
